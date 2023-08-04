@@ -34,7 +34,6 @@ export async function buildExtended(
         artifacts.outputs.push(...otherFileArtifacts.outputs);
         artifacts.logs.push(...otherFileArtifacts.logs);
         artifacts.success = otherFileArtifacts.success;
-        console.log("artifacts", artifacts)
     }
 
     if (cssFiles.length) {
