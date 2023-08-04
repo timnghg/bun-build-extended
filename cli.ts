@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import {buildExtended} from "./index.ts";
+import {buildExtended} from "./index";
 import process from "process";
 import {BuildConfig} from "bun";
 import set from "lodash.set";

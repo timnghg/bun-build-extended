@@ -3,6 +3,7 @@ import {buildExtended} from "../index.ts";
 
 describe("bun-build :: cli", () => {
     it("should handle css", async () => {
+        Bun.spawnSync(["bun", "x", "tailwindcss", "init"]);
         const snapshot = (await Bun.file("test/test.snapshot.css").text()).trim();
         const output = Bun.spawnSync(["bun", "cli.ts", "./test/test.css"]);
         const css = output.stdout.toString().trim();

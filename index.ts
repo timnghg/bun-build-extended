@@ -71,11 +71,11 @@ export async function buildExtended(
 }
 
 function tailwindcss(path: string, options?: string[]) {
-    return Bun.spawnSync(['bunx', 'tailwindcss', "--minify", ...(options || []), "-i", path]);
+    return Bun.spawnSync(['bun', 'x', 'tailwindcss', "--minify", ...(options || []), "-i", path]);
 }
 
 function postcssCli(path: string, options?: string[]) {
-    return Bun.spawnSync(['bunx', 'postcss-cli', path, ...(options || [])]);
+    return Bun.spawnSync(['bun', 'x', 'postcss-cli', path, ...(options || [])]);
 }
 
 /**
