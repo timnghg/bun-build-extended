@@ -1,0 +1,23 @@
+{
+  "name": "bun-build-extended",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "bun test"
+  },
+  "bin": {
+    "build-extended": "./cli.ts"
+  },
+  "devDependencies": {
+    "@types/lodash.set": "^4.3.7",
+    "bun-types": "latest",
+    "tailwindcss": "^3.3.3",
+    "postcss-cli": "^10.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "lodash.set": "^4.3.2"
+  }
+}
