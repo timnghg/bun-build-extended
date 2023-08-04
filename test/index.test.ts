@@ -39,7 +39,12 @@ describe("bun-build :: cli", () => {
             entrypoints: ["./test/test.css"],
         });
         const css = (await build.outputs[0].text()).trim();
+
+        // debug ci
+        if (!css) console.log(build.logs);
+
         expect(css).toBeTruthy();
+
 
         // todo: find reason of output different in Github CI
         // const snapshot = (await Bun.file("./test/test.postcss.snapshot.css").text()).trim();
